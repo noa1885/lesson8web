@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      body {
+          font-family: Arial, sans-serif;
+          background-color: #f4f4f4;
+          margin: 0;
+          padding: 20px;
+      }
+
+      form {
+          background: white;
+          padding: 20px;
+          border-radius: 8px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          max-width: 400px;
+          margin: auto;
+      }
+
+      label {
+          display: block;
+          margin-bottom: 5px;
+          font-weight: bold;
+      }
+
+      input[type="text"],
+      textarea,
+      select {
+          width: 100%;
+          padding: 10px;
+          margin-bottom: 15px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+      }
+
+      button {
+          background-color: #28a745;
+          color: white;
+          border: none;
+          padding: 10px 15px;
+          border-radius: 4px;
+          cursor: pointer;
+          font-size: 16px;
+      }
+
+      button:hover {
+          background-color: #218838;
+      }
+
+      textarea {
+          resize: vertical; /* Allow vertical resizing only */
+      }
+  </style>
+  <title>Document</title>
+</head>
+<body>
+   <script src="lesson8.js"></script>   
+   <form id="messageForm">
+    <label for="messageType">Message Type:</label>
+    <select id="messageType">
+        <option value="info">Info</option>
+        <option value="warning">Warning</option>
+        <option value="error">Error</option>
+    </select>
+    
+    <label for="title">Title:</label>
+    <input type="text" id="title" placeholder="Enter title" required>
+
+    <label for="msg">Message:</label>
+    <textarea id="msg" placeholder="Enter your message here" required></textarea>
+
+    <button type="button" id="ok" onclick="enter()">אישור</button>
+  </form>
+<div id="messageContainer"></div>
+
+</body>
+</html>
